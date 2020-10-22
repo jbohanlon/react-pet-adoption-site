@@ -33,7 +33,7 @@ const SearchParams = () => {
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name); // Get string version of the current breed's name
       setBreeds(breedStrings);
-    }, console.error);
+    }, console.error); // eslint-disable-line no-console
   }, [animal, setBreed, setBreeds]); // List of dependencies that React will check for changes, and it'll re-run useEffect if any changed
 
   return (
