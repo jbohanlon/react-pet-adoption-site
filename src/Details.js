@@ -7,14 +7,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-      showModal: false,
-    };
-  }
+  state = { loading: true, showModal: false };
 
   componentDidMount() {
     // pet.animal() fires an AJAX request and returns a Promise object.
@@ -77,7 +70,9 @@ class Details extends React.Component {
                 <h1>Would you like to adopt {name}?</h1>
                 <div className="buttons">
                   <button onClick={this.adopt}>Yes</button>
-                  <button onClick={this.toggleModal}>No, I'm a monster</button>
+                  <button onClick={this.toggleModal}>
+                    No, I&apos;m a monster
+                  </button>
                 </div>
               </div>
             </Modal>
