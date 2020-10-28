@@ -4,10 +4,12 @@
   "description": "Pet adoption tutorial from Front End Masters",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build --public-url ./dist/ src/index.html",
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js, html}\" --write",
     "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+    "start": "npm run build && babel-node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,10 +41,13 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "@babel/node": "^7.12.1",
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.35",
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.3.4",
+    "babel-cli": "^6.26.0",
+    "express": "^4.17.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
