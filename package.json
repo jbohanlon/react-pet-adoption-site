@@ -8,7 +8,8 @@
     "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js, html}\" --write",
     "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.12.1",
+    "@types/reach__router": "^1.3.6",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.11.0",
@@ -36,7 +40,8 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "node-forge": ">=0.10.0",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",

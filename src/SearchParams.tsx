@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useContext } from "react";
-import pet, { ANIMALS } from "@frontendmasters/pet";
+import React, { useState, useEffect, useContext, FunctionComponent } from "react";
+import pet, { ANIMALS, Animal } from "@frontendmasters/pet";
 import Results from "./Results";
 import useDropdown from "./useDropdown";
 import ThemeContext from "./ThemeContext";
+import { RouteComponentProps } from "@reach/router";
 
-const SearchParams = () => {
+const SearchParams: FunctionComponent<RouteComponentProps> = () => {
   const [location, setLocation] = useState("Seattle, WA");
-  const [breeds, setBreeds] = useState([]);
+  const [breeds, setBreeds] = useState([] as string[]);
   const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
   const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
-  const [pets, setPets] = useState([]); // Empty array because there aren't any pets when you first request them from the API
+  const [pets, setPets] = useState([] as Animal[]); // Empty array because there aren't any pets when you first request them from the API
   const [theme, setTheme] = useContext(ThemeContext); // You aren't going to need setTheme so grabbing it isn't necessary
 
   // async functions always return a Promise when they complete
