@@ -8,5 +8,8 @@
         "sourceMap": false
       }
     ]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", {}, "@babel/plugin-proposal-class-properties-hack-to-fix-duplicate-warning"]
   ]
 }
