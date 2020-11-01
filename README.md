@@ -1,2 +1,2 @@
-# adopt-me
-Pet adoption tutorial from Front End Masters
+# javascript-react-pet-adoption-site
+Pet adoption website, based on Frontend Masters React course
