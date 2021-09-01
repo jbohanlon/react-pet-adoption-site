@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbohanlon/adopt-me.git"
+    "url": "git+https://github.com/jbohanlon/react-pet-adoption-site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jbohanlon/adopt-me/issues"
+    "url": "https://github.com/jbohanlon/react-pet-adoption-site/issues"
   },
-  "homepage": "https://github.com/jbohanlon/adopt-me#readme",
+  "homepage": "https://github.com/jbohanlon/react-pet-adoption-site",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
